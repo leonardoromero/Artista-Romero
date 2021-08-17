@@ -139,6 +139,7 @@ p {
 /* Sección Historia */
 
 .historia {
+    width: 100%;
     max-width: 1300px;
     margin: 0 auto;
     &__container {
@@ -160,6 +161,7 @@ p {
             @include flex(space-evenly);
             flex-flow: column;
             line-height: 2.5rem;
+            width: 90%;
             max-width: 60rem;
             justify-self: center;
             text-align: justify;
@@ -178,9 +180,7 @@ p {
     margin: 2rem 1rem;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    iframe {
-        width: 100%;
-    }
+    
 }
 
 /* Sección Contacto */

@@ -20,9 +20,7 @@
                 font-size: 1.6rem;
                 margin: 0 25px;
                 padding: 16px 10px;
-                &.nav-link {
-                    border-radius: .5rem;
-                }
+                
             }
             ul {
                 background-color: $gris;
@@ -42,13 +40,10 @@
         }
     }
 
-    .navbar-light .navbar-nav .nav-link {
-        color: $gris;
-        &.active {
-            color: $ladrillo;
-        }
+    h2 {
+        font-size: 5rem;
     }
-
+    
     .parallax a img {
         width: 14em;
         z-index: 5;
