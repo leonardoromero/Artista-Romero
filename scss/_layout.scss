@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $gris;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+    font-family: $default;
+}

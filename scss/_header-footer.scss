@@ -1,0 +1,50 @@
+header, footer {
+    background-color: $ladrillo;
+}
+
+nav, footer {
+    @include flex(flex-end);
+    align-items: center;
+}
+
+header {
+    grid-row: 1 / 2;
+}
+
+#logo {
+    width: 4rem;
+}
+
+.active, nav li a:hover {
+    background-color: $gris;
+    color: $ladrillo;
+}
+
+.dropdown-item {
+    color: $ladrillo;
+    &:hover {
+        color: white;
+        background: $ladrillo;
+    }
+}
+
+footer {
+    @include flex(center);
+    padding: 2rem;
+    grid-row: 3 / 4;
+    .footer-container {
+        @include flex(space-between);
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+        &__copyright {
+            color: $gris;
+            font-size: 1.3rem;
+            margin: 0;
+        }
+        &__redes {
+            @include flex(space-evenly);
+            width: 20%;
+        }
+    }
+}

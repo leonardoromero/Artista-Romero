@@ -1,0 +1,29 @@
+h1 {
+    background-color: $oliva;
+    color: $gris;
+    font-size: 3.5rem;
+    letter-spacing: .2rem;;
+    text-align: center;
+    font-family: $section-title;
+    font-weight: 700;
+    padding: 2rem 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: $oliva;
+    font-size: 5rem;
+    text-align: center;
+    font-family: $section-title;
+    margin: 20px;
+}
+
+h3 {
+    font-size: 4rem;
+    color: $oliva;
+    border-bottom: $oliva solid 1px;
+}
+
+h3 span {
+    font-size: 2.5rem;
+}

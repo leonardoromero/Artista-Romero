@@ -1,0 +1,134 @@
+@media only screen and (min-width: 700px) {
+    .portadas {
+        display: flex;
+    }
+    
+    nav ul {
+        margin-right: 10px;
+        margin-bottom: 0;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            position: relative;
+            &:hover ul {
+                display: block;
+            }
+            a {
+                color: $gris;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 1.6rem;
+                margin: 0 25px;
+                padding: 16px 10px;
+                &.nav-link {
+                    border-radius: .5rem;
+                }
+            }
+            ul {
+                background-color: $gris;
+                position: absolute;
+                min-width: 190px;
+                z-index: 9;
+                display: none;
+                left: 2.5em;
+                li a {
+                    width: 190px;
+                    padding: 1em 1em;
+                    margin: 0;
+                    color: $ladrillo;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: $gris;
+        &.active {
+            color: $ladrillo;
+        }
+    }
+
+    .parallax a img {
+        width: 14em;
+        z-index: 5;
+        bottom: 4rem;
+    }
+
+    /* Cada disco de discografía */
+
+    .layout-disco {
+        grid-template-areas: "titulo titulo"
+                             "portada-principal contenido"
+                             "discografia discografia";
+        &__portada-principal {
+            width: 95%;
+        }
+        &__contenido {
+            &__letra p {
+            margin: 1.5rem 0 0 0;
+            text-align: center; 
+            }
+            &__sinapsis {
+                justify-self: center;
+                max-width: 60rem;
+            }
+        }
+    }
+
+    h3 {
+        margin-left: 30%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    h1 {
+        background-color: $oliva;
+        color: $gris;
+        font-size: 5vmax;
+        text-align: center;
+        font-family: $section-title;
+        font-weight: 700;
+        position: absolute;
+        left: 2rem;
+        bottom: 4rem;
+        width: 35%;
+        letter-spacing: .5rem;
+        animation: title 10s linear infinite alternate;
+        z-index: 5;
+    }
+
+    .discografia {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .historia__container {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        background: none;
+        margin: 1.5rem 1rem;
+        padding: 1rem;
+        background: rgba(157, 85, 52, .3);
+        &__ps {
+            padding: 1rem;
+        }
+        &__imgs,
+        &__video {
+            padding: 1rem;
+            background: rgba(157, 85, 52, .5);
+        }
+    }
+
+    form {
+        width: 45%;
+        margin: 0 auto;
+    }
+    
+    form div, button {
+        padding: 1rem 0;
+    } 
+
+    .portadaMini {
+        padding-bottom: 0;
+    }
+}
