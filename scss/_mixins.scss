@@ -2,3 +2,7 @@
     display: flex;
     justify-content: $justify;
 }
+
+@mixin maxwidth {
+    max-width: 110rem;
+}
