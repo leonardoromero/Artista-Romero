@@ -22,15 +22,18 @@ p {
 
 .portadas {
     display: none;
-    justify-content: space-evenly;
-    flex-flow: wrap;
-    margin: 1rem;
-    background: rgba(0,0,0,.15);
-    border-radius: 1.5rem;
+    @include maxwidth;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 15rem));
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+    justify-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,.2);
+    border-radius: 2rem;
     &__portada {
-        width: 100px;
+        width: 100%;
         transition: transform .2s;
-        padding: 1rem 0;
         &:hover {
             transform: scale(1.1, 1.1);
             transition: transform .2s;
@@ -67,8 +70,10 @@ p {
     display: grid;
     padding: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     justify-content: center;
+    @include maxwidth;
+    margin: 0 auto;
     &__portada {
         width: 100%;
         transition: transform .2s;
@@ -140,7 +145,7 @@ p {
 
 .historia {
     width: 100%;
-    max-width: 1300px;
+    @include maxwidth;
     margin: 0 auto;
     &__container {
         display: grid;
@@ -177,10 +182,10 @@ p {
 
 .participaciones {
     display: grid;
-    margin: 2rem 1rem;
+    margin: 3rem auto;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    
+    @include maxwidth;
 }
 
 /* Sección Contacto */
@@ -189,10 +194,20 @@ p {
     padding: 2rem;
 }
 
+.input-group-text,
+.form-select,
+.form-control,
+.btn,
+form
+ {
+    font-size: 1.3rem;
+}
+
 form div, button {
     padding: 1rem 0;
 } 
 
 form button {
     width: 100%;
+    margin: 1rem auto;
 }
