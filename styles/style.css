@@ -7813,7 +7813,7 @@ html {
 
 .parallax a img {
   position: absolute;
-  bottom: 1em;
+  bottom: 2em;
   right: 3em; }
 
 p {
@@ -8126,9 +8126,9 @@ body {
   h2, .h2 {
     font-size: 5rem; }
   .parallax a img {
-    width: 14em;
+    width: 20em;
     z-index: 5;
-    bottom: 4rem; }
+    bottom: 5rem; }
   /* Cada disco de discografía */
   .layout-disco {
     grid-template-areas: "titulo titulo" "portada-principal contenido" "discografia discografia"; }
@@ -8155,7 +8155,7 @@ body {
     font-weight: 700;
     position: absolute;
     left: 2rem;
-    bottom: 4rem;
+    bottom: 5rem;
     width: 35%;
     letter-spacing: .5rem;
     animation: title 10s linear infinite alternate;

@@ -46,9 +46,9 @@
     }
     
     .parallax a img {
-        width: 14em;
+        width: 20em;
         z-index: 5;
-        bottom: 4rem;
+        bottom: 5rem;
     }
 
     /* Cada disco de discografía */
@@ -93,7 +93,7 @@
         font-weight: 700;
         position: absolute;
         left: 2rem;
-        bottom: 4rem;
+        bottom: 5rem;
         width: 35%;
         letter-spacing: .5rem;
         animation: title 10s linear infinite alternate;
