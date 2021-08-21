@@ -7849,7 +7849,7 @@ p {
 
 .alert {
   position: absolute;
-  top: 55px;
+  top: 52px;
   z-index: 5;
   width: 100%; }
 
@@ -7876,11 +7876,12 @@ p {
 
 /* Cada disco de la sección Discografía */
 .layout-disco {
+  max-width: 110rem;
   display: grid;
   grid-template-columns: 30% auto;
   grid-template-areas: "titulo titulo" "portada-principal portada-principal" "contenido contenido" "discografia discografia";
   row-gap: 2rem;
-  margin: 1%; }
+  margin: 0 auto; }
   .layout-disco__titulo {
     grid-area: titulo; }
   .layout-disco__portada-principal {
@@ -7892,14 +7893,14 @@ p {
     grid-area: contenido;
     display: grid; }
     .layout-disco__contenido__letra p {
-      margin: 1.5rem 0 0 0;
+      margin: 2rem 0 0 0;
       text-align: center; }
     .layout-disco__contenido__sinapsis {
       color: #48233c;
       font-size: 1.6rem;
       font-style: italic;
       text-align: justify;
-      margin: 1rem 1rem 1rem 0;
+      margin: 2rem 2rem 0rem 0;
       max-width: 30rem;
       justify-self: center; }
   .layout-disco__discografia {
@@ -7910,7 +7911,8 @@ p {
     flex-wrap: wrap;
     background: rgba(0, 0, 0, 0.15);
     padding: 1rem;
-    border-radius: 2rem; }
+    border-radius: 2rem;
+    margin: 2rem; }
     .layout-disco__discografia__portada {
       width: 10rem;
       transition: transform .2s;
@@ -7977,10 +7979,12 @@ form button {
   width: 100%;
   margin: 1rem auto; }
 
-header, footer {
+header,
+footer {
   background-color: #9D5534; }
 
-nav, footer {
+nav,
+footer {
   display: flex;
   justify-content: flex-end;
   align-items: center; }
@@ -7989,7 +7993,7 @@ header {
   grid-row: 1 / 2; }
 
 #logo {
-  width: 30rem; }
+  width: 25rem; }
 
 .navbar-light .navbar-nav .nav-link {
   color: #dddde6;
@@ -8007,6 +8011,9 @@ header {
   .navbar-light .navbar-nav .nav-link.disabled {
     padding: 0.25rem 1rem; }
 
+.fixed-top {
+  background: #9D5534; }
+
 ul li ul li a {
   font-size: 1.6rem; }
 
@@ -8020,25 +8027,30 @@ ul li ul li a {
     background: #9D5534; }
 
 footer {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-  grid-row: 3 / 4; }
-  footer .footer-container {
+  display: grid;
+  grid-template-rows: 2;
+  grid-gap: 1rem;
+  padding: 2.5rem;
+  justify-content: center; }
+  footer div {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    width: 100%; }
-    footer .footer-container__copyright {
+    justify-content: center; }
+    footer div p {
       color: #dddde6;
+      font-size: 1.5rem;
+      text-align: center;
       font-size: 1.3rem;
-      margin: 0;
-      width: 70%; }
-    footer .footer-container__redes {
+      margin: 0; }
+    footer div a.creator {
+      color: white;
+      text-decoration: none; }
+      footer div a.creator:hover {
+        text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa; }
+    footer div img {
+      width: 5rem; }
+    footer div.footer-container__redes {
       display: flex;
-      justify-content: space-evenly;
-      width: 30%; }
+      justify-content: space-evenly; }
 
 h1, .h1 {
   background-color: #8c792b;
@@ -8075,7 +8087,8 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif;
+  padding-top: 50px; }
 
 @media only screen and (min-width: 700px) {
   .portadas {
@@ -8127,6 +8140,8 @@ body {
     .layout-disco__contenido__sinapsis {
       justify-self: center;
       max-width: 60rem; }
+    .layout-disco__discografia__portada {
+      width: 15rem; }
   h3, .h3 {
     margin-left: 30%; } }
 
@@ -8165,4 +8180,35 @@ body {
   form div, button {
     padding: 1rem 0; }
   .portadaMini {
-    padding-bottom: 0; } }
+    padding-bottom: 0; }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem .5rem;
+    grid-row: 3 / 4; }
+    footer .footer-container__copyright {
+      width: 40%; }
+      footer .footer-container__copyright p {
+        color: #dddde6;
+        font-size: 1.3rem;
+        margin: 0;
+        width: 100%;
+        text-align: left;
+        padding: 0 2rem; }
+    footer .footer-container__creator {
+      width: 30%;
+      display: flex;
+      align-items: center; }
+      footer .footer-container__creator p {
+        text-align: center;
+        color: white; }
+    footer .footer-container__redes {
+      display: flex;
+      justify-content: space-evenly;
+      width: 40%; }
+      footer .footer-container__redes img {
+        width: 3.5rem;
+        transition: transform .2s; }
+        footer .footer-container__redes img:hover {
+          transform: scale(1.1, 1.1);
+          transition: transform .2s; } }

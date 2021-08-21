@@ -53,7 +53,7 @@ p {
 
 .alert {
     position: absolute;
-    top: 55px;
+    top: 52px;
     z-index: 5;
     width: 100%;
 }
@@ -87,6 +87,7 @@ p {
 /* Cada disco de la sección Discografía */
 
 .layout-disco {
+    @include maxwidth();
     display: grid;
     grid-template-columns: 30% auto;
     grid-template-areas: "titulo titulo"
@@ -94,7 +95,7 @@ p {
                          "contenido contenido"
                          "discografia discografia";
     row-gap: 2rem;
-    margin: 1%;
+    margin: 0 auto;
     &__titulo {
         grid-area: titulo;
     }
@@ -108,7 +109,7 @@ p {
         grid-area: contenido;
         display: grid;
         &__letra p {
-            margin: 1.5rem 0 0 0;
+            margin: 2rem 0 0 0;
             text-align: center;
         }
         &__sinapsis {
@@ -116,7 +117,7 @@ p {
             font-size: 1.6rem;
             font-style: italic;
             text-align: justify;
-            margin: 1rem 1rem 1rem 0;
+            margin: 2rem 2rem 0rem 0;
             max-width: 30rem;
             justify-self: center;
         }
@@ -129,6 +130,7 @@ p {
         background: rgba(0,0,0,.15);
         padding: 1rem;
         border-radius: 2rem;
+        margin: 2rem;
         &__portada {
             width: 10rem;
             transition: transform .2s;

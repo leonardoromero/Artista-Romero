@@ -70,12 +70,18 @@
                 max-width: 60rem;
             }
         }
+        &__discografia__portada {
+            width: 15rem;
+        }
     }
 
     h3 {
         margin-left: 30%;
     }
+
+    
 }
+
 
 @media only screen and (min-width: 1024px) {
     h1 {
@@ -126,5 +132,46 @@
 
     .portadaMini {
         padding-bottom: 0;
+    }
+
+    footer {
+        @include flex(space-between);
+        padding: 2rem .5rem;
+        grid-row: 3 / 4;
+        .footer-container {
+            &__copyright {
+                width: 40%;
+                p {
+                    color: $gris;
+                    font-size: 1.3rem;
+                    margin: 0;
+                    width: 100%;
+                    text-align: left;
+                    padding: 0 2rem;
+                }
+            }
+            &__creator {
+                width: 30%;
+                display: flex;
+                align-items: center;
+                p {
+                    text-align: center;
+                    color: white;
+                    
+                }
+            }
+            &__redes {
+                @include flex(space-evenly);
+                width: 40%;
+                img {
+                    width: 3.5rem;
+                    transition: transform .2s;
+                    &:hover {
+                        transform: scale(1.1, 1.1);
+                        transition: transform .2s;
+                    }
+                }
+            }
+        }
     }
 }
