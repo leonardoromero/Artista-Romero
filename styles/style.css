@@ -7865,7 +7865,6 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 2rem;
   justify-content: center;
-  max-width: 110rem;
   margin: 0 auto; }
   .discografia__portada {
     width: 100%;

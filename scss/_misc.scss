@@ -72,7 +72,6 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 2rem;
     justify-content: center;
-    @include maxwidth;
     margin: 0 auto;
     &__portada {
         width: 100%;
