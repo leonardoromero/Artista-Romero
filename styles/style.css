@@ -7902,6 +7902,9 @@ p {
       margin: 2rem 2rem 0rem 0;
       max-width: 30rem;
       justify-self: center; }
+    .layout-disco__contenido iframe {
+      width: 90%;
+      margin: 1rem auto; }
   .layout-disco__discografia {
     grid-area: discografia;
     display: flex;
@@ -7946,7 +7949,7 @@ p {
       width: 90%;
       max-width: 60rem;
       justify-self: center;
-      text-align: justify;
+      text-align: left;
       padding: 0 1.5rem; }
     .historia__container__video {
       display: flex;
@@ -7962,14 +7965,14 @@ p {
 
 /* Sección Contacto */
 .container {
-  padding: 2rem; }
+  padding: 0 2rem 2rem 2rem; }
 
 .input-group-text,
 .form-select,
 .form-control,
 .btn,
 form {
-  font-size: 1.3rem; }
+  font-size: 1.4rem; }
 
 form div, button {
   padding: 1rem 0; }
@@ -8071,8 +8074,9 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 4rem;
-  color: #8c792b;
-  border-bottom: #8c792b solid 1px; }
+  padding: 2rem 1rem 0 1rem;
+  text-align: center;
+  color: #8c792b; }
 
 h3 span, .h3 span {
   font-size: 2.5rem; }
@@ -8139,11 +8143,14 @@ body {
     .layout-disco__contenido__sinapsis {
       justify-self: center;
       max-width: 60rem; }
+    .layout-disco__contenido iframe {
+      margin: 0 auto; }
     .layout-disco__discografia__portada {
       width: 15rem; }
   h3, .h3 {
-    margin-left: 30%;
-    margin-top: 2rem; } }
+    margin-left: 30%; }
+  .discografia {
+    grid-template-columns: repeat(4, minmax(150px, 250px)); } }
 
 @media only screen and (min-width: 1024px) {
   h1, .h1 {
@@ -8160,8 +8167,6 @@ body {
     letter-spacing: .5rem;
     animation: title 10s linear infinite alternate;
     z-index: 5; }
-  .discografia {
-    grid-template-columns: repeat(6, minmax(150px, 250px)); }
   .historia__container {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
